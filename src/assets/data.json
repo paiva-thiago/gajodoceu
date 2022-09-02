@@ -1,0 +1,22 @@
+[
+    {
+        "br":"LEGAL",
+        "pt":"FIXE"
+    },
+    {
+        "br":"MOÇA",
+        "pt":"RAPARIGA"
+    },
+    {
+        "br":"RAPAZ",
+        "pt":"GAJO"
+    },
+    {
+        "br":"ONIBUS",
+        "pt":"AUTOCARRO"
+    },
+    {
+        "br":"TREM",
+        "pt":"COMBOIO"
+    }
+]
