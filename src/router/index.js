@@ -10,6 +10,16 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: "/br-pt",
+      name: "Brasileiro / Português",
+      component: () => import("../views/EscritaPanelBrPt.vue"),
+    },
+    {
+      path: "/pt-br",
+      name: "Português / Brasileiro",
+      component: () => import("../views/EscritaPanelPtBr.vue"),
+    },
+    {
       path: "/about",
       name: "about",
       // route level code-splitting

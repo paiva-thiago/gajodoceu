@@ -1,4 +1,6 @@
 <script setup>
+import Flag from './Flag.vue';
+
 defineProps({
   appName: {
     type: String,
@@ -10,7 +12,7 @@ defineProps({
 <template>
   <div class="greetings">
     <h1 class="green">{{ appName }}</h1>
-    <h3>Um dicionário 🇵🇹/🇧🇷 e 🇧🇷/🇵🇹!</h3>
+    <h3>Um dicionário <Flag countryCode="pt"/>/<Flag countryCode="br"/> e <Flag countryCode="br"/>/<Flag countryCode="pt"/> </h3>
   </div>
 </template>
 

@@ -10,6 +10,8 @@ import HomePanel from "./components/HomePanel.vue";
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/pt-br">Português de Portugal - Português do Brasil</RouterLink>
+        <RouterLink to="/br-pt">Português do Brasil - Português de Portugal</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>

@@ -1,9 +1,7 @@
-<script setup>
-import EscritaPanel from "@/components/EscritaPanel.vue";
-</script>
+
 
 <template>
   <main>
-    <EscritaPanel />
-  </main>
+    <h1>Escolha uma das opções ao lado!</h1> 
+   </main>
 </template>

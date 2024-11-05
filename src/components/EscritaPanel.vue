@@ -1,49 +1,52 @@
 <script>
 import json from "../assets/data.json";
-import LangSwitcher from "./LangSwitcher.vue";
 
 export default {
   data() {
     return {
+      from: "",
+      to: "",
       pergunta: "",
       resposta: "",
       chave: {},
-      dict: json,
+      dict: json,  
+      label: {
+        "pt": "Português de Portugal / Português do Brasil",
+        "br": "Português do Brasil / Português de Portugal",
+      }
     };
   },
   methods: {
     greet(event) {
-      alert(`Hello ${this.name}!`);
       if (event) {
         alert(event.target.tagName);
       }
     },
     capitalize: (str) =>
       str.charAt(0).toUpperCase() + str.toLowerCase().slice(1),
-    busca() {
+    busca(from,to) {
       this.resposta = "";
       this.chave = this.dict.filter(
-        (x) => x[LangSwitcher.data().from] == this.pergunta.toUpperCase()
+        (x) => x[from] == this.pergunta.toUpperCase()
       );
       if (this.chave.length > 0) {
         for (const termo of this.chave) {
           this.resposta =
             this.resposta +
-            this.capitalize(termo[LangSwitcher.data().to]) +
+            this.capitalize(termo[to]) +
             ",";
         }
         let lim = this.resposta.length - 1;
         this.resposta = this.resposta.substring(0, lim) + ".";
       }
     },
-  },
-  components: { LangSwitcher },
-};
+  }
+  };
 </script>
 
 <template>
-  <p><LangSwitcher /></p>
-  <input type="text" size="20" @keyup="busca" v-model="pergunta" />
+  <h1>{{ label[from] }}</h1>
+  <input type="text" size="20" @keyup="busca(from,to)" v-model="pergunta" />
   <span id="retorno">Quer dizer...{{ resposta }}</span>
 </template>
 
