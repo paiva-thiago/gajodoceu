@@ -1,11 +1,13 @@
 <script>
 export default {
   data() {
+    localStorage.setItem("from", "pt");
+    localStorage.setItem("to", "br");
     return {
       from: "pt",
       to: "br",
-      icoFrom:"🇵🇹",
-      icoTo:"🇧🇷"
+      icoFrom: "🇵🇹",
+      icoTo: "🇧🇷",
     };
   },
   methods: {
@@ -16,6 +18,8 @@ export default {
       aux = this.icoFrom;
       this.icoFrom = this.icoTo;
       this.icoTo = aux;
+      localStorage.setItem("from", this.from);
+      localStorage.setItem("to", this.to);
     },
   },
 };
@@ -32,7 +36,7 @@ export default {
   background-color: transparent;
   border-radius: 10px;
   border-color: #ccc;
-  background-color:#020;
-  color:#ccc;
+  background-color: #020;
+  color: #ccc;
 }
 </style>
