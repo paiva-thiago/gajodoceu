@@ -18,25 +18,5 @@
     {
         "br":"TREM",
         "pt":"COMBOIO"
-    },
-    {
-        "br":"GOL",
-        "pt":"GOLO"
-    },
-    {
-        "br":"SEMI-FINAL",
-        "pt":"MEIAS FINAIS"
-    },
-    {
-        "br":"ATACANTE",
-        "pt":"PONTA DE LANÇA"
-    },
-    {
-        "br":"ROTATÓRIA",
-        "pt":"ROTUNDA"
-    },
-    {
-        "br":"ACOSTAMENTO",
-        "pt":"BERMA"
     }
 ]
