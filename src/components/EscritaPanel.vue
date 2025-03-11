@@ -22,15 +22,14 @@ export default {
       str.charAt(0).toUpperCase() + str.toLowerCase().slice(1),
     busca() {
       this.resposta = "";
+      let from = localStorage.getItem("from");
+      let to = localStorage.getItem("to");
       this.chave = this.dict.filter(
-        (x) => x[LangSwitcher.data().from] == this.pergunta.toUpperCase()
+        (x) => x[from] == this.pergunta.toUpperCase()
       );
       if (this.chave.length > 0) {
         for (const termo of this.chave) {
-          this.resposta =
-            this.resposta +
-            this.capitalize(termo[LangSwitcher.data().to]) +
-            ",";
+          this.resposta = this.resposta + this.capitalize(termo[to]) + ",";
         }
         let lim = this.resposta.length - 1;
         this.resposta = this.resposta.substring(0, lim) + ".";
